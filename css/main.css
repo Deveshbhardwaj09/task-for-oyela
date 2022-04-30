@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container-main {
+  /* background-color: rgb(233, 96, 138); */
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.content-logo {
+  animation-name: move-in-left;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.content-tagline {
+  margin-top: 3.5rem;
+  text-align: center;
+  animation-name: move-in-right;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.content-tagline h2 {
+  font-size: 3.8rem;
+}
+
+.employee-container {
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+}
+
+.employee-container .heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.employee-container .heading h1 {
+  font-size: 3.8rem;
+}
+
+.employee-container .employee-content table {
+  font-size: 2rem;
+}
+
+tr {
+  height: 5rem !important;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: rgb(233, 96, 138);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.25s;
+}
+
+a:hover {
+  background-color: rgba(233, 96, 137, 0.904);
+  color: #fff;
+}
+
+.col-linkedin {
+  width: 50%;
+}
+
+@keyframes move-in-left {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-right {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 45%;
+  }
+  .col-linkedin {
+    width: 40%;
+  }
+  .col-portfolio {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  html {
+    font-size: 40%;
+  }
+  body {
+    padding: 0 3rem;
+  }
+
+  .employee-container {
+    padding: 0;
+  }
+
+  .content-logo {
+    width: 100%;
+    display: grid;
+  }
+  .content-logo img {
+    width: 100%;
+  }
+
+  .col-linkedin {
+    width: 35%;
+  }
+  .col-portfolio {
+    width: 30%;
+  }
+}
